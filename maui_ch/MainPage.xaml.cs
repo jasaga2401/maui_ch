@@ -13,19 +13,19 @@ namespace maui_ch
                 {
                     Label = "January",
                     ValueLabel = "200",
-                    Color = SKColor.Parse("#266489")
+                    Color = SKColor.Parse("#3489eb")
                 },
                 new ChartEntry(400)
                 {
                     Label = "February",
                     ValueLabel = "400",
-                    Color = SKColor.Parse("#68B9C0")
+                    Color = SKColor.Parse("#094b96")
                 },
-                new ChartEntry(-100)
+                new ChartEntry(200)
                 {
                     Label = "March",
-                    ValueLabel = "-100",
-                    Color = SKColor.Parse("#90D585")
+                    ValueLabel = "200",
+                    Color = SKColor.Parse("#2f4157")
                 }
             };
 
@@ -33,7 +33,11 @@ namespace maui_ch
         {
             InitializeComponent();
 
-            chartView.Chart = new BarChart() { Entries = entries };
+            chartView.Chart = new LineChart() 
+            { 
+                Entries = entries,
+                LabelTextSize = 40
+            };            
         }       
     }
 }
